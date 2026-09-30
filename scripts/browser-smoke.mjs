@@ -75,11 +75,28 @@ try {
   await page.locator('summary').filter({ hasText: '¿Tokenz tendrá un plan gratuito?' }).click();
   assert.equal(await page.locator('details').filter({ hasText: '¿Tokenz tendrá un plan gratuito?' }).getAttribute('open'), '');
 
-  for (const section of ['privacy/', 'help/']) {
+  for (const section of ['privacy/', 'privacy/app/', 'help/']) {
     await page.goto(new URL(section, base).href, { waitUntil: 'networkidle' });
     for (const width of [1440, 390, 320]) {
       await page.setViewportSize({ width, height: 844 });
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, `${section} overflow at ${width}`);
+    }
+    if (section === 'privacy/') {
+      await page.getByRole('link', { name: 'política de privacidad de la app Tokenz', exact: true }).click();
+      assert.equal(new URL(page.url()).pathname, '/privacy/app/');
+    }
+    if (section === 'privacy/app/') {
+      await page.getByRole('link', { name: 'Eliminar cuenta', exact: true }).click();
+      assert.equal(new URL(page.url()).hash, '#eliminar-cuenta');
+      assert.equal(await page.locator('#eliminar-cuenta').getByText('Todavía no está operativo.', { exact: false }).isVisible(), true);
+      await page.getByRole('link', { name: 'Tus derechos', exact: true }).click();
+      assert.equal(new URL(page.url()).hash, '#derechos');
+      await page.getByRole('link', { name: 'Tokenz, inicio' }).first().click();
+      await page.goto(new URL('privacy/app/', base).href, { waitUntil: 'networkidle' });
+      for (const width of [1440, 390]) {
+        await page.setViewportSize({ width, height: 1000 });
+        await page.screenshot({ path: path.join(evidence, `privacy-app-${width}.png`) });
+      }
     }
     await page.getByRole('link', { name: 'Volver al inicio' }).click();
     assert.equal(new URL(page.url()).pathname, '/');
@@ -87,7 +104,7 @@ try {
   assert.deepEqual([...requests], [url.hostname], 'no third-party asset/data requests');
   assert.equal((await context.cookies()).length, 0, 'website creates no cookies');
   assert.deepEqual(errors, [], 'browser console and HTTP resources clean');
-  console.log('Browser checks passed: 4 responsive widths, keyboard/tabs, norm undo, reward insufficient/cancel/Escape/confirm/reset/reload, FAQ, help/privacy, no external requests or cookies.');
+  console.log('Browser checks passed: 4 responsive widths, keyboard/tabs, norm undo, reward insufficient/cancel/Escape/confirm/reset/reload, FAQ, help/privacy/app-policy and deletion/rights anchors, no external requests or cookies.');
   console.log(`Screenshots: ${evidence}`);
 } finally {
   await browser.close();

@@ -1209,6 +1209,7 @@ p {
 .site-footer nav {
   margin-left:auto;
   display:flex;
+  flex-wrap:wrap;
   gap:25px;
   font-size:12px;
   font-weight:700
@@ -1344,6 +1345,63 @@ dialog::backdrop {
   font-size:12px;
   letter-spacing:.15em;
   color:var(--teal-dark)
+}
+
+.policy-document h3 {
+  font-size:20px;
+  line-height:1.4;
+  letter-spacing:-.015em;
+  margin-top:25px;
+}
+
+.policy-document .policy-version {
+  font-size:12px;
+}
+
+.policy-document .document-notice h2 {
+  font-size:20px;
+  margin:0 0 12px;
+}
+
+.policy-summary {
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:24px;
+  padding:25px;
+  margin-top:30px;
+}
+
+.policy-summary h2 {
+  font-size:23px;
+  margin:0;
+}
+
+.policy-summary ul {
+  padding-left:22px;
+  margin-bottom:0;
+}
+
+.policy-index {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:24px;
+}
+
+.policy-index a {
+  display:inline-flex;
+  align-items:center;
+  min-height:48px;
+  border:1px solid #d2eee8;
+  border-radius:14px;
+  background:var(--mint);
+  padding:10px 14px;
+  font-size:13px;
+  font-weight:700;
+}
+
+.policy-document section {
+  scroll-margin-top:18px;
 }
 
 @media(min-width:1450px) {
