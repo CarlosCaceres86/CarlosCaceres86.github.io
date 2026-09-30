@@ -95,6 +95,8 @@ try {
       await page.goto(new URL('privacy/app/', base).href, { waitUntil: 'networkidle' });
       for (const width of [1440, 390]) {
         await page.setViewportSize({ width, height: 1000 });
+        await page.goto(new URL('privacy/app/', base).href, { waitUntil: 'networkidle' });
+        await page.evaluate(() => document.fonts.ready);
         await page.screenshot({ path: path.join(evidence, `privacy-app-${width}.png`) });
       }
     }
