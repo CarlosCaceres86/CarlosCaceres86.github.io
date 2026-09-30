@@ -30,7 +30,7 @@ Diseño: Nunito local con licencia OFL, colores y recursos existentes de Tokenz;
 
 ## Antes del lanzamiento de la app
 
-La app se presenta como próxima. No añadir enlaces ficticios a tiendas, compras web, formularios de datos familiares o testimonios inventados. La página de privacidad actual describe únicamente este sitio; faltan la política completa de la app y un contacto privado confirmado por el propietario.
+La app se presenta como próxima. No añadir enlaces ficticios a tiendas, compras web, formularios de datos familiares o testimonios inventados. `privacy/` describe únicamente este sitio; `privacy/app/` contiene la política de la app como versión previa al lanzamiento. El propietario ha pedido dejar el correo para más tarde. Faltan identificación legal/contacto, justificación específica de los datos de menores, condiciones de proveedores y plazos finales de conservación. [Inventario y requisitos pendientes](tasks/privacy-readiness.md). No retirar el aviso de versión previa ni dar por operativa la solicitud externa de borrado mientras falten esos datos y mecanismos.
 
 La raíz del dominio permite alojar `/.well-known/assetlinks.json` y `/.well-known/apple-app-site-association`. Estos archivos **no están publicados**: deben contener las huellas reales de firma y los identificadores de Apple. No usar valores de ejemplo. Publicarlos no basta: comprobar HTTP, MIME, ausencia de redirects y asociación efectiva desde cada app. El sitio no cambia la configuración de enlaces/auth del cliente ni de Supabase.
 
