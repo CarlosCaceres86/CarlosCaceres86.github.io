@@ -14,6 +14,16 @@ node --test tests/demo.test.mjs
 python3 scripts/check_site.py
 ```
 
+Prueba real de navegador (Playwright y Chrome instalados en el entorno de QA):
+
+```sh
+PLAYWRIGHT_MODULE=/ruta/a/node_modules/playwright \
+CHROME_EXECUTABLE=/ruta/al/binario/chrome \
+  node scripts/browser-smoke.mjs http://127.0.0.1:4173/ /tmp/tokenz-web-evidence
+```
+
+El mismo script admite `https://carloscaceres86.github.io/` para comprobar la publicación. Valida 1440/768/390/320px, teclado, objetivos táctiles, completar/deshacer, saldo insuficiente, cancelar/Escape/confirmar/reiniciar, recarga, FAQ y navegación de documentos; rechaza errores de consola/HTTP, peticiones de terceros y cookies. Guarda capturas en la carpeta indicada, fuera del código público.
+
 La demo funciona solo en memoria. Su estado puro vive en `demo-state.mjs`; `app.js` coordina pestañas, accesibilidad, puntos, diálogo de canje y reinicio. Cancelar/Escape no canjea. Después de canjear, las normas quedan bloqueadas hasta reiniciar el ejemplo para evitar saldos negativos. No se escribe en cookies ni local/session storage.
 
 Diseño: Nunito local con licencia OFL, colores y recursos existentes de Tokenz; [procedencia](assets/PROVENANCE.md). El código móvil, las claves, la configuración privada y el backend no pertenecen a este repositorio. No se concede una licencia abierta a la marca o ilustraciones por publicar estos archivos.
