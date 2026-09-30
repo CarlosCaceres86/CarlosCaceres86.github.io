@@ -5,3 +5,9 @@
 4. Add help/privacy using confirmed technical facts; keep missing app legal/contact details explicit.
 5. Validate real browser, keyboard, responsive sizing and navigation; commit and publish a new public repository with main/root Pages.
 6. Verify deployed HTTPS, assets, interactions and Pages state; record evidence.
+
+## Privacy extension
+1. Audit actual app data/deletion/providers and primary privacy requirements; append approved scope.
+2. Write /privacy/app/ using existing page styles and layers: simple summary, detailed sections and explicit prelaunch pending fields.
+3. Link from website privacy/help; record evidence and unresolved legal/operational gates without changing app/backend.
+4. Verify document links/anchors, responsive screenshots and existing browser flows; publish and check Pages/HTTP.
