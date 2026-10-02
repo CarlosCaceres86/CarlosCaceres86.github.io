@@ -1,7 +1,7 @@
-# App privacy policy readiness — 30 September 2026
+# App privacy policy readiness — 2 October 2026
 
 ## Authorized delivery and scope
-Owner requested continuing the app privacy policy and explicitly deferred creating email. Publish /privacy/app/ as a clearly marked prelaunch version, link from website privacy/help, preserve website styling and actual implementation claims. The site privacy remains separate. This is content documentation, not an app/backend change, a legal certification or an assertion of Play readiness. Controller legal identity requested asynchronously; do not infer it from GitHub profile.
+Owner requested continuing the app privacy policy and explicitly deferred creating email. Publish /privacy/app/ as a clearly marked prelaunch version, link from website privacy/help, preserve website styling and actual implementation claims. The site privacy remains separate. This is content documentation, not an app/backend change, a legal certification or an assertion of Play readiness. On 2 October 2026, the owner directly confirmed the controller name and country as Carlos Cáceres González, España. This identity is based on that user confirmation, not an inference from the GitHub profile.
 
 ## Verified inventory before the 1 October erasure fix
 - Account email, password authentication, user/session identifiers; encrypted platform session secret, no plaintext password persisted in app.
@@ -16,7 +16,7 @@ Owner requested continuing the app privacy policy and explicitly deferred creati
 App references: domain/Model.kt and design-system/ChildAvatar.kt; identity AuthRepository/AccountFlowState and platform session stores; docs/BOARD_REMINDERS.md; backend baseline create tables/record_change/triggers/delete FKs; migration20260930091458; backend MONETIZATION.md, OPERATIONS.md; CLOUD_PERMISSION_MATRIX.md; send-board-invitation/handler.ts; _shared/observability.ts. No production user rows or secrets inspected. Read-only independent review found and corrected two guest/invitation deletion overclaims.
 
 ## Launch gates still open
-- [ ] Confirm controller legal identity and required contact details; no fictitious identity/address.
+- [x] Publish the user-confirmed controller name and country. No NIF, postal address, company registration or private email was supplied; the private contact remains pending.
 - [ ] Owner creates private privacy/support mailbox and external account-deletion request route; GitHub issues are not an acceptable private route. Instructions alone must not be marked a functioning external deletion flow.
 - [ ] Establish and implement lawful basis/transparency/authorization for children's data, with appropriate representatives. Account contract alone does not automatically cover child data; OS permission is not GDPR consent. Do not promise nonexistent age/consent verification.
 - [ ] Confirm final email provider, DPA/roles, subprocessor and international transfer arrangements for Supabase/email/Google; signed status not inferred from provider public DPA page.
@@ -57,3 +57,7 @@ The first real encrypted backup from hosted beta authentication and the public s
 The manual operating cadence is weekly: keep the two most recent weekly copies and the latest copy made before a relevant operation. There is no scheduler and no paid backup service. Missed or delayed runs can leave a copy absent or older; retaining two weekly copies does not promise universal deletion exactly 14 days after creation. Existing account deletions do not edit already-created copies immediately. A future restoration must reapply subsequent erasures and access revocations before reopening service; if authoritative evidence is unavailable, keep the restored service closed. That follow-up erasure/revocation evidence mechanism is not implemented yet. The isolated local restore was compared against the hosted source and passed data-content plus normalized schema, security, index and sequence checks. The private operator evidence is maintained in the app repository; this public record omits customer content, amounts, identifiers, fingerprints and paths.
 
 This verifies encrypted copy creation and an isolated local restore only. It does not establish disaster HTTP/API recovery readiness, legal certification, or an implemented replay mechanism for later erasure/revocation. The existing 30-day sync-prefix and 7-day resolved/expired-invitation metadata jobs remain active and separate; purchase proof/RTDN/logs still need their own criteria. The prelaunch, controller/contact, children's-data lawful-basis, provider/transfer and fiscal gates remain open.
+
+## Identidad del responsable/policy v0.5 — 2 de octubre de 2026
+
+The owner directly confirmed the controller name and country: Carlos Cáceres González, España. The public app policy now identifies the controller using those exact facts. This confirmation did not supply or establish a NIF, postal address, company registration or private contact email. The private email, children's-data lawful basis, provider/transfer terms, fiscal criteria, final retention criteria and recovery-erasure evidence remain open. España identifies the confirmed country associated with the controller; it does not define or imply the app's launch countries. The policy remains prelaunch. This record relies on direct user confirmation, not GitHub metadata.

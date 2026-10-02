@@ -33,6 +33,10 @@ Owner approved a daily maintenance policy: delete the old contiguous sync-change
 
 The public policy remains prelaunch. Controller/contact, child-data lawful basis, processor/transfer agreements and launch readiness gates remain open. See privacy-readiness.md for the retained historical audit and current outstanding criteria.
 
+## Controller identity/policy v0.5 — 2 October 2026
+
+The app policy now identifies the controller as Carlos Cáceres González, España, based on the owner's direct confirmation. The preparation notice and rights section no longer say the identity is pending. Private contact email, children's-data lawful basis, provider/transfer terms, fiscal criteria and final retention criteria remain pending; the policy remains prelaunch. The country confirmation does not imply launch-country coverage. No NIF, postal address, company registration, customer data, app source, backup paths or keys were added.
+
 Local site checks: `python3 scripts/check_site.py` passed with4HTML documents and84local links/assets/fragments; `node --test tests/demo.test.mjs` passed7/7; `git diff --check` passed. Playwright/Chrome smoke passed locally and on the deployed site at1440/768/390/320px, including policy/deletion/rights navigation, keyboard flow, all demo interactions, no console/HTTP errors, third-party requests or cookies. GitHub Pages build1253240839 for commit e9593cd completed successfully; the public app policy returned HTTP200 and served v0.3 with the approved retention text.
 
 ## Copias de recuperación/policy v0.4 — 1 de octubre de 2026
