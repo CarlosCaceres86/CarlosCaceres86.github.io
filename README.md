@@ -1,41 +1,8 @@
-# Tokenz — web pública
+# Tokenz — redirección del sitio
 
-Presentación informativa de Tokenz, con la estética de la app y un tablero de demostración independiente. HTML/CSS/JavaScript estático, sin dependencias de producción, backend, cuentas, formularios, publicidad ni analítica añadida.
+El sitio web de Tokenz se trasladó a un repositorio público dedicado:
 
-- Web: https://carloscaceres86.github.io/
-- Repositorio: https://github.com/CarlosCaceres86/CarlosCaceres86.github.io
-- Publicación: GitHub Pages desde `main`, carpeta `/`, HTTPS y `.nojekyll`.
+- Web: https://carloscaceres86.github.io/tokenz-site/
+- Repositorio: https://github.com/CarlosCaceres86/tokenz-site
 
-## Desarrollo y comprobaciones
-
-```sh
-python3 -m http.server 4173 --bind 127.0.0.1
-node --test tests/demo.test.mjs
-python3 scripts/check_site.py
-```
-
-Prueba real de navegador (Playwright y Chrome instalados en el entorno de QA):
-
-```sh
-PLAYWRIGHT_MODULE=/ruta/a/node_modules/playwright \
-CHROME_EXECUTABLE=/ruta/al/binario/chrome \
-  node scripts/browser-smoke.mjs http://127.0.0.1:4173/ /tmp/tokenz-web-evidence
-```
-
-El mismo script admite `https://carloscaceres86.github.io/` para comprobar la publicación. Valida 1440/768/390/320px, teclado, objetivos táctiles, completar/deshacer, saldo insuficiente, cancelar/Escape/confirmar/reiniciar, recarga, FAQ y navegación de documentos; rechaza errores de consola/HTTP, peticiones de terceros y cookies. Guarda capturas en la carpeta indicada, fuera del código público.
-
-La demo funciona solo en memoria. Su estado puro vive en `demo-state.mjs`; `app.js` coordina pestañas, accesibilidad, puntos, diálogo de canje y reinicio. Cancelar/Escape no canjea. Después de canjear, las normas quedan bloqueadas hasta reiniciar el ejemplo para evitar saldos negativos. No se escribe en cookies ni local/session storage.
-
-Diseño: Nunito local con licencia OFL, colores y recursos existentes de Tokenz; [procedencia](assets/PROVENANCE.md). El código móvil, las claves, la configuración privada y el backend no pertenecen a este repositorio. No se concede una licencia abierta a la marca o ilustraciones por publicar estos archivos.
-
-## Antes del lanzamiento de la app
-
-La app se presenta como próxima. No añadir enlaces ficticios a tiendas, compras web, formularios de datos familiares o testimonios inventados. `privacy/` describe únicamente este sitio; `privacy/app/` contiene la política de la app como versión previa al lanzamiento. El propietario ha pedido dejar el correo para más tarde. Faltan identificación legal/contacto, justificación específica de los datos de menores, condiciones de proveedores y plazos finales de conservación. [Inventario y requisitos pendientes](tasks/privacy-readiness.md). No retirar el aviso de versión previa ni dar por operativa la solicitud externa de borrado mientras falten esos datos y mecanismos.
-
-La raíz del dominio permite alojar `/.well-known/assetlinks.json` y `/.well-known/apple-app-site-association`. Estos archivos **no están publicados**: deben contener las huellas reales de firma y los identificadores de Apple. No usar valores de ejemplo. Publicarlos no basta: comprobar HTTP, MIME, ausencia de redirects y asociación efectiva desde cada app. El sitio no cambia la configuración de enlaces/auth del cliente ni de Supabase.
-
-GitHub Pages se utiliza exclusivamente para contenido informativo y esta demostración efímera; licencias y compras se gestionarán en la app mediante Google Play, y el backend seguirá en Supabase.
-
-## Entrega
-
-La especificación y tareas se conservan en `SPEC.md` y `tasks/`. Antes de publicar cambios: pruebas, integridad, revisión visual desktop/móvil y navegación con teclado. Evitar custom workflows de pago y no aumentar límites de gasto. Comprobar HTTPS y las respuestas reales después de desplegar.
+GitHub Pages conserva este dominio personal para que los enlaces anteriores sigan funcionando. La página principal y las rutas antiguas de ayuda y privacidad redirigen al sitio nuevo, preservando la ruta, la consulta y el fragmento del enlace cuando el navegador ejecuta JavaScript.

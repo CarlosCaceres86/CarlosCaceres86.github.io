@@ -8,9 +8,19 @@
   <meta property="og:title" content="Tokenz · Pequeños logros, grandes sonrisas">
   <meta property="og:description" content="Un poquito de ilusión para las rutinas de cada día. Descubre Tokenz y prueba un tablero de ejemplo.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://carloscaceres86.github.io/">
-  <meta property="og:image" content="https://carloscaceres86.github.io/assets/mascot.png">
-  <link rel="canonical" href="https://carloscaceres86.github.io/">
+  <meta http-equiv="refresh" content="0;url=https://carloscaceres86.github.io/tokenz-site/">
+  <meta property="og:url" content="https://carloscaceres86.github.io/tokenz-site/">
+  <meta property="og:image" content="https://carloscaceres86.github.io/tokenz-site/assets/mascot.png">
+  <link rel="canonical" href="https://carloscaceres86.github.io/tokenz-site/">
+  <script>
+    (() => {
+      const path = window.location.pathname.replace(/\/index\.html$/, "/").replace(/^\/+/, "");
+      const target = new URL(path, "https://carloscaceres86.github.io/tokenz-site/");
+      target.search = window.location.search;
+      target.hash = window.location.hash;
+      window.location.replace(target.href);
+    })();
+  </script>
   <link rel="icon" type="image/png" href="assets/star.png">
   <link rel="preload" href="assets/fonts/nunito-extrabold.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="styles.css">
