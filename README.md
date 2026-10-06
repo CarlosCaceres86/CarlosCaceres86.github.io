@@ -1,8 +1,10 @@
-# Tokenz — redirección del sitio
+# Tokenz — direcciones antiguas
 
-El sitio web de Tokenz se trasladó a un repositorio público dedicado:
+La web se mantiene en la carpeta `site/` del repositorio privado
+`CarlosCaceres86/Tokenz` y se publica automáticamente en Cloudflare Pages:
+https://tokenz.zereslab.com/.
 
-- Web: https://carloscaceres86.github.io/tokenz-site/
-- Repositorio: https://github.com/CarlosCaceres86/tokenz-site
-
-GitHub Pages conserva este dominio personal para que los enlaces anteriores sigan funcionando. La página principal y las rutas antiguas de ayuda y privacidad redirigen al sitio nuevo, preservando la ruta, la consulta y el fragmento del enlace cuando el navegador ejecuta JavaScript.
+Este repositorio conserva únicamente la compatibilidad de las direcciones
+publicadas anteriormente. Las cuatro páginas redirigen al nuevo dominio;
+el script conserva query y fragmento, y existe enlace de respaldo sin JavaScript.
+La web se modifica y despliega desde el repositorio principal de Tokenz.
